@@ -97,10 +97,9 @@ public:
 	static Vector3 RotateByY(Vector3 vec, float alpha)
 	{
 		float X = vec.x;
-		float Y = vec.y;
 		float Z = vec.z;
 
-		vec.x = X * cos(alpha) - Y * sin(alpha);
+		vec.x = X * cos(alpha) + Z * sin(alpha);
 		vec.z = -X * sin(alpha) + Z * cos(alpha);
 
 		return vec;
